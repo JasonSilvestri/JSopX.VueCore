@@ -1,0 +1,1 @@
+# JSopX.ClassLibrary
