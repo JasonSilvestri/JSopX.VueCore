@@ -3,6 +3,15 @@
 ### Phase 1
 The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com BETA v 2024 JSopX™ Open Demo Collections ASP.NET Core 8 Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. 
 
+## Authors:
+- For author information, please refer to the [jsopx-authors](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/docs/includes/jsopx-authors.md).
+
+or
+
+Below:
+
+[include]((https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/docs/includes/jsopx-authors.md)
+
 ## Overview
 
 The `jSilvestri.com BETA v 2024` mobile and web applications, developed for most smart phones, tablets and desktop computers, was created to showcase a wide range of skills to potential clients and employers, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
