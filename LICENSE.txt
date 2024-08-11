@@ -1,6 +1,18 @@
-MIT License
+﻿jSilvestri.com BETA v 2024 JSopX™ OpenX Demo Collection Project: 
+[JSopX™ Asp.NET Core Class Library Project](https://github.com/JasonSilvestri/JSopX.ClassLibrary)
 
-Copyright (c) [year] [fullname]
+Phase 1 of 4:
+
+[Licensed under MIT](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/LICENSE.txt)
+
+© 2024 Jason Silvestri · All Rights Reserved  
+
+============================================================================
+Authors & Developers of Code: Jason Silvestri, 
+Solution Architect, Lead Sr. Multi-Platform Software Engineer & .NET Full-Stack Developer
+
+Ownership: Jason Silvestri
+============================================================================
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
