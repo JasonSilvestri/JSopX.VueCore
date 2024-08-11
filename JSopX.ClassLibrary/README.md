@@ -5,13 +5,13 @@ The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ 
 
 
 ## Authors:
-- For author information, please refer to the [jsopx-authors](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/docs/includes/jsopx-authors.md).
+- For author information, please refer to the [jsopx-authors](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/JSopX.ClassLibrary/docs/includes/jsopx-authors.md).
 
 or
 
 Below:
 
-[include]((https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/docs/includes/jsopx-authors.md)
+[include](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/JSopX.ClassLibrary/docs/includes/jsopx-authors.md)
 
 ## Overview
 
