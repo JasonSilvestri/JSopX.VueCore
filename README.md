@@ -1,23 +1,23 @@
-# JSopX™ Class Library Asp.NET Core OpenX Project
-### from the ﻿jSilvestri.com BETA v 2024 JSopX™ OpenX Demo Collection Project
-### Phase 1
-> [!IMPORTANT]
-> This Project is in Phase 1 of 4. It should be treated as simply reference material for now. Conversely, Phase 2 is days away, and Phase 3 is only a week after that. Phase 3 Projects will be more mature, and action-packed with features, assets and more!
+# JSopX™ Class Library Open Project EXperience
+### from the ﻿jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Collection
 
-The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com BETA v 2024 JSopX™ Open Demo Collections ASP.NET Core 8 Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. 
+### Phase 1
+
+> [!IMPORTANT]
+> This Project is in Phase 1. It should be treated as simply reference material for now. Conversely, Phase 2 is days away, and Phase 3 is only a week after that. Phase 3 Projects will be more mature, and action-packed with features, assets and more!
+
+The `JSopX.ClassLibrary` Project (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, ASP.NET Core Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. This library promotes code reuse, reduces duplication, and simplifies maintenance.  
 
 ## Overview
 
-The `jSilvestri.com BETA v 2024` mobile and web applications, developed for most smart phones, tablets and desktop computers, was created to showcase a wide range of skills to potential clients and employers, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
+The `JSopX.ClassLibrary` Project (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, ASP.NET Core Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. This library promotes code reuse, reduces duplication, and simplifies maintenance. 
 
-The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com BETA v 2024 JSopX™ Open Demo Collections ASP.NET Core 8 Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. This library promotes code reuse, reduces duplication, and simplifies maintenance. 
-
-Many applications in the `Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection`, such as the `Angular Web API Demo`, `Blazor Web API Demo`, `React Web API Demo`, and `Vue Web API Demo` applications will use this project to reference common features throughout the collective applications.
+Many applications in the custom jSilvestri.com BETA v 2024 Enterprise-Level, Multi-Platform, Multi-Stack `JSopX™ Open Project EXperiences Collection` Project, such as the `JSopX™ Angular Core`, `JSopX™ Blazor Server Core`, `JSopX™ React Core`, and `JSopX™ Vue Core` Projects use this `ClassLibrary` project to reference common features throughout their collective user experiences.
 
 
 ## Alerts
 
-Please pay close attention to the alerts that appear in documentation that look like the following:
+**Please pay close attention to the `alerts` that appear in all documentation that look like the following:**
 
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
@@ -36,9 +36,9 @@ Please pay close attention to the alerts that appear in documentation that look 
 
 ### Prerequisites
 
-The JSopX™ OpenX `JSopX.ClassLibrary`Project requires at least the following technologies to run as expected.
+The JSopX™ `JSopX.ClassLibrary`  Open Project EXperience Project requires at least the following technologies to run as expected.
 
-- [jSilvestri.com BETA v 2024 JSopX™ OpenX Collection Project](https://github.com/JasonSilvestri/JSopX.OpenXDemoCollection)
+- [jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection](https://github.com/JasonSilvestri/JSopX.OpenProjectX)
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [ASP.NET Core 8 Documentation](https://learn.microsoft.com/en-us/aspnet/core/)
 - [Visual Studio or Visual Studio Code 2022 (v 17.10.3) or higher](https://visualstudio.microsoft.com/)
@@ -46,7 +46,7 @@ The JSopX™ OpenX `JSopX.ClassLibrary`Project requires at least the following t
 
 ### Corequisites
 
-Just about every project from the [jSilvestri.com BETA v 2024 JSopX™ OpenX Collection Project](https://github.com/JasonSilvestri/JSopX.OpenXDemoCollection) uses this `JSopX.ClassLibrary` Project. 
+Just about every project from the [jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection](https://github.com/JasonSilvestri/JSopX.OpenProjectX) uses this `JSopX.ClassLibrary` Project. 
 
 I encourage all who visit to dive in as much as you like, perform peer reviews, engage, and have fun! Conversely, to ensure all apps run as expected, you will need to know some of the following technologies:
 
@@ -119,40 +119,41 @@ If you have no interest in reviewing the documentation on the technologies from 
     ```
 
 ## VS Project & Solution Structure
-The JSopX™ OpenX `JSopX.ClassLibrary` class library, is a shared library, and one of serveral projects that make up all apps in the [Official jSilvestri.com BETA v 2024 JSopX™ OpenX Collection Project](https://github.com/JasonSilvestri/JSopX.OpenXDemoCollection). It is worth just skimming through them below if you have a sec.
+The JSopX™ `JSopX.ClassLibrary` class library, is a shared library, and one of serveral projects that make up all apps in the [Official jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection](https://github.com/JasonSilvestri/JSopX.OpenProjectX). It is worth just skimming through them below if you have a sec.
 
 **The solution includes the following projects:**
 
-- **[Official jSilvestri.com BETA v 2024 JSopX™ OpenX Collection Project](https://github.com/JasonSilvestri/JSopX.OpenXDemoCollection)**: The main `JSopX.OpenXDemoCollection` solution. This soluton includes all projects described below, but doesn't have any major function outside having a place where all projects can be consumed at once. In fact, all projects below were also designed to have their own, independent repositories, which can be downloaded and/or run alone (respectfully).
+- **[Official jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection](https://github.com/JasonSilvestri/JSopX.OpenProjectX)**: The main `JSopX.OpenProjectX` solution. This soluton includes all projects described below, but doesn't have any major function outside having a place where all projects can be consumed at once. In fact, all projects below were also designed to have their own, independent repositories, which can be downloaded and/or run alone (respectfully).
 
 **The JSopX™ OpenX Shared Projects:**
 
 The following JSopX™ Projects are used to share common resources and information across all other projects.
 
-1. **[JSopX™ Web API Project](https://github.com/JasonSilvestri/JSopX.WebApi)**: The `JsopxWebAPI` Project, is an ASP.NET Core Web API project with JWT authentication and generic CRUD operations.
+1. **[JSopX™ Web API Project](https://github.com/JasonSilvestri/JSopX.WebAPI)**: The `JsopxWebAPI` Project, is an ASP.NET Core Web API project with JWT authentication and generic CRUD operations.
 2. **[JSopX™ Class Library Project](https://github.com/JasonSilvestri/JSopX.ClassLibrary)**: The `JSopX.ClassLibrary` class library, is a shared library, containing constants, DTOs, and helper classes. 
-3. **[JSopX™ Shared Resources Project](https://github.com/JasonSilvestri/JSopX.SharedResources)**: The `JSopX.SharedResources` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects across projects in a more traditional way.
-4. **[JSopX™ Razor Class Library Assets Project](https://github.com/JasonSilvestri/JSopX.RazorClassLibraryAssets)**: The `JSopX.RazorClassLibraryAssets` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects across projects in a more traditional way.
-5. **[JSopX™ Razor Class Library Components Project](https://github.com/JasonSilvestri/JSopX.RazorClassLibraryComponents)**: The `JSopX.RazorClassLibraryComponents` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects across projects in a more traditional way.
+3. **[JSopX™ Shared Resources Project](https://github.com/JasonSilvestri/JSopX.SharedResources)**: The `JSopX.SharedResources` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more traditional way.
+4. **[JSopX™ Razor Class Library RCLxProper Project](https://github.com/JasonSilvestri/JSopX.RCLxProper)**: The `JSopX.RCLxProper` shared Razor Class library, containing the most lightweight version of our common HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more modern way (to better support npm, vite, webpack based operations).
+5. **[JSopX™ Razor Class Library RCLxAssets Project](https://github.com/JasonSilvestri/JSopX.RCLxAssets)**: The `JSopX.RCLxAssets` shared recources library, containing all possible assets, src, and creative versions of our  HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more modern way (to better support npm, vite, webpack based operations).
+6. **[JSopX™ Razor Class Library RCLxComponents Project](https://github.com/JasonSilvestri/JSopX.RCLxComponents)**: The `JSopX.RCLxComponents` shared recources library, containing common Razor Componets and other reuseable theming objects used in our Asp.NET Core, Blazor and .NET MAUI projects.
 
-**The JSopX™ OpenX Projects that access the Asp.NET Core WebAPI:**
+**The JSopX™ Open Project EXperiences that access the Asp.NET Core WebAPI:**
 
 The following Projects are different front-end and back-end technologies, such as Angular, React & Vue, backed by Asp.NET Core back-end (for security purposes). Nonetheless, these different Web API Demos & technology access the same primary Web API for CRUD operations. I consider myself still in Discovery with the latest versions of these technologies, but that is all part of the game.
 
-- **[JSopX™ Asp.NET Core OpenX Project](https://github.com/JasonSilvestri/JSopX.AspNetCoreOpX)**: An Asp.NET Core Client-Side and Server-Side Server .NET Core Web API project.
-- **[JSopX™ Blazor Asp.NET Core OpenX Project](https://github.com/JasonSilvestri/JSopX.BlazorServerCoreOpX)**: A Blazor and Asp.NET Core OpenX Project Client-Side and Server-Side .NET Core Web API project.
-- **[JSopX™ Angular Core OpenX Project](https://github.com/JasonSilvestri/JSopX.AngularCoreOpX)**: An Angular and Asp.NET Core OpenX Project Client-Side and Server-Side .NET Core Web API project.
-  - **JsopxAngularCoreOpX.Server**: The server-side .NET Core Web API project.
+- **[JSopX™ Asp.NET Core Project](https://github.com/JasonSilvestri/JSopX.AspNetCore)**: An Asp.NET Core Client-Side and Server-Side Server .NET Core Web API project.
+- **[JSopX™ Blazor Asp.NET Core Project](https://github.com/JasonSilvestri/JSopX.BlazorServerCore)**: A Blazor and Asp.NET Core Open Project EXperience Client-Side and Server-Side .NET Core Web API project.
+- **[JSopX™ Angular Core Project](https://github.com/JasonSilvestri/JSopX.AngularCore)**: An Angular and Asp.NET Core Open Project EXperience Client-Side and Server-Side .NET Core Web API project.
+  - **JsopxAngularCore.Server**: The server-side .NET Core Web API project.
   - **jsopxangularcoreopx.client**: The client-side Angular project.
-- **[JSopX™ React Core OpenX Project](https://github.com/JasonSilvestri/JSopX.ReactCoreOpX)**: A React and Asp.NET Core OpenX Project Client-Side and Server-Side .NET Core Web API project.
-  - **JsopxReactCoreOpX.Server**: The server-side .NET Core Web API project.
+- **[JSopX™ React Core Project](https://github.com/JasonSilvestri/JSopX.ReactCore)**: A React and Asp.NET Core Open Project EXperience Client-Side and Server-Side .NET Core Web API project.
+  - **JsopxReactCore.Server**: The server-side .NET Core Web API project.
   - **jsopxreactcoreopx.client**: The client-side React project.
-- **[JSopX™ Vue Core OpenX Project](https://github.com/JasonSilvestri/JSopX.VueCoreOpX)**: A Vue and Asp.NET Core OpenX Project Client-Side and Server-Side .NET Core Web API project.
-  - **JsopxVueCoreOpX.Server**: The server-side .NET Core Web API project.
+- **[JSopX™ Vue Core Project](https://github.com/JasonSilvestri/JSopX.VueCore)**: A Vue and Asp.NET Core Open Project EXperience Client-Side and Server-Side .NET Core Web API project.
+  - **JsopxVueCore.Server**: The server-side .NET Core Web API project.
   - **jsopxvuecoreopx.client**: The client-side Vue project.
-- **[JSopX™ MAUI Hybrid OpenX Project](https://github.com/JasonSilvestri/JSopX.OpenXDemoCollection)**: The flagship .NET MAUI Hybrid Muti-Platform Application of the jSilvestri.com BETA v 2024 JSopX™ OpenX Collection Project, which deploys to the Web, Windows & Mac Desktop, and native Windows, iPhone, Andriod, and Samsug mobile application.
+- **[JSopX™ MAUI Hybrid Project](https://github.com/JasonSilvestri/JSopX.OpenProjectX)**: The flagship .NET MAUI Hybrid Muti-Platform Application of the jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection, which deploys to the Web, Windows & Mac Desktop, and native Windows, iPhone, Andriod, and Samsug mobile application.
 
-## JSopX™ Class Library OpenX Project Structure
+## JSopX™ Class Library Open Project EXperience Structure
 
 The project is organized into the following structure:
 
@@ -224,17 +225,17 @@ public class ExampleService
 
 ### Reference the Shared Resources Project
 
-1. **Add a project reference** to `JsxSharedResources` in each client project:
-    - Right-click on the client project (e.g., `JsxAngularWebApiDemo`, `JsxReactWebApiDemo`, `JsxVueWebApiDemo`, `JsxBlazorWebApiDemo`).
+1. **Add a project reference** to `JsopX.SharedResources` in each client project:
+    - Right-click on the client project (e.g., `JsopX.AngularCore`, `JsopX.ReactCore`, `JsopX.VueCore`, `JsopX.BlazorServerCore`).
     - Select **Add** > **Project Reference**.
-    - Check `JsxSharedResources` and click **OK**.
+    - Check `JsopX.SharedResources` and click **OK**.
 
 ### Example: Blazor Project
 
-**In `JsxBlazorWebApiDemo`**:
+**In `JsopX.BlazorServerCore`**:
 
 1. **Reference the Shared Resources Project**:
-    - Add a reference to `JsxSharedResources` in `JsxBlazorWebApiDemo`.
+    - Add a reference to `JsopX.SharedResources` in `JsopX.BlazorServerCore`.
 
 2. **Use Static Files in Razor Components**:
     - Create a Razor component that uses the shared static files.
@@ -252,16 +253,16 @@ public class ExampleService
 
 ### Example: Angular Project
 
-**In `JsxAngularWebApiDemo`**:
+**In `JsopX.AngularCore`**:
 
 1. **Copy Files Using a Build Script**:
-    - Create a script to copy the shared resources from `JsxSharedResources` to the `assets` folder of the Angular project during the build process.
+    - Create a script to copy the shared resources from `JsopX.SharedResources` to the `assets` folder of the Angular project during the build process.
 
     ```json
     
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsxSharedResources/* ./src/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./src/assets/"
     }
     ```
 
@@ -277,16 +278,16 @@ public class ExampleService
 
 ### Example: Vue Project
 
-**In `JsxVueWebApiDemo`**:
+**In `JsopX.VueCore`**:
 
 1. **Copy Files Using a Build Script**:
-    - Create a script to copy the shared resources from `JsxSharedResources` to the `assets` folder of the Vue project during the build process.
+    - Create a script to copy the shared resources from `JsopX.SharedResources` to the `assets` folder of the Vue project during the build process.
 
     ```json
     
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsxSharedResources/* ./public/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/assets/"
     }
     ```
 
@@ -306,16 +307,16 @@ public class ExampleService
 
 ### Example: React Project
 
-**In `JsxReactWebApiDemo`**:
+**In `JsopX.ReactCore`**:
 
 1. **Copy Files Using a Build Script**:
-    - Create a script to copy the shared resources from `JsxSharedResources` to the `public` folder of the React project during the build process.
+    - Create a script to copy the shared resources from `JsopX.SharedResources` to the `public` folder of the React project during the build process.
 
     ```json
     // package.json
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsxSharedResources/* ./public/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/assets/"
     }
     ```
 
@@ -342,7 +343,7 @@ public class ExampleService
 
 ### Conclusion
 
-This area of the guide provides a basic overview of setting up the `JsxSharedResources` project to manage shared static resources and using these resources in various client projects (`JsxAngularCoreWebApiDemo`, `JsxReactCoreWebApiDemo`, `JsxVueCoreWebApiDemo`, and `JsxBlazorServerCoreWebApiDemo`). Follow the instructions to ensure your projects can consistently and efficiently utilize shared resources.
+This area of the guide provides a basic overview of setting up the `JsopX.SharedResources` project to manage shared static resources and using these resources in various client projects (`JsxAngularCoreWebApiDemo`, `JsxReactCoreWebApiDemo`, `JsxVueCoreWebApiDemo`, and `JsxBlazorServerCoreWebApiDemo`). Follow the instructions to ensure your projects can consistently and efficiently utilize shared resources.
 
 ---
 
@@ -359,8 +360,8 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.SharedResources
-        /MyApp.SharedResources.csproj
+      /JSopxNewApp.SharedResources
+        /JSopxNewApp.SharedResources.csproj
         /wwwroot
           /css
             /styles.css
@@ -375,7 +376,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
 2. **Configure the Project File:**
 
-    **`MyApp.SharedResources.csproj`:**
+    **`JSopxNewApp.SharedResources.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Razor">
       <PropertyGroup>
@@ -397,21 +398,21 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.Api
-        /MyApp.Api.csproj
-      /MyApp.SharedResources
+      /JSopxNewApp.WebAPI
+        /JSopxNewApp.WebAPI.csproj
+      /JSopxNewApp.SharedResources
     ```
 
 2. **Configure the Project File:**
 
-    **`MyApp.Api.csproj`:**
+    **`JSopxNewApp.WebAPI.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Web">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedResources\MyApp.SharedResources.csproj" />
+        <ProjectReference Include="..\JSopxNewApp.SharedResources\JSopxNewApp.SharedResources.csproj" />
       </ItemGroup>
     </Project>
     ```
@@ -469,15 +470,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-react/public/index.html`:**
+    **`jsopx-new-app-in-react/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -497,15 +498,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-vue/public/index.html`:**
+    **`jsopx-new-app-in-vue/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -525,15 +526,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Static Files:**
 
     Modify `index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-angular/src/index.html`:**
+    **`jsopx-new-app-in-angular/src/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -552,7 +553,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
     Add `HttpClientModule` to `app.module.ts` to ensure API requests work.
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -590,7 +591,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 - **ASP.NET Core Project:**
     ```
     /src
-      /MyApp.Api
+      /JSopxNewApp.WebAPI
         /wwwroot
           /css
             /styles.css
@@ -620,14 +621,14 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create the Class Library Project:**
 
     ```bash
-    dotnet new classlib -n MyApp.SharedLib
+    dotnet new classlib -n JSopxNewApp.SharedLib
     ```
 
 2. **Add Business Logic to the Class Library:**
 
-    **`MyApp.SharedLib/StringHelper.cs`:**
+    **`JSopxNewApp.SharedLib/StringHelper.cs`:**
     ```csharp
-    namespace MyApp.SharedLib.Utilities
+    namespace JSopxNewApp.SharedLib.Utilities
     {
         public static class StringHelper
         {
@@ -643,12 +644,12 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 3. **Create a Razor Class Library Project (for UI Components):**
 
     ```bash
-    dotnet new razorclasslib -n MyApp.UIComponents
+    dotnet new razorclasslib -n JSopxNewApp.UIComponents
     ```
 
 4. **Add Razor Components:**
 
-    **`MyApp.UIComponents/Components/HelloWorld.razor`:**
+    **`JSopxNewApp.UIComponents/Components/HelloWorld.razor`:**
     ```razor
     <h3>Hello, world!</h3>
     ```
@@ -657,7 +658,7 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 
     ```bash
     dotnet pack -c Release
-    dotnet nuget push MyApp.SharedLib.1.0.0.nupkg -k <YOUR_API_KEY> -s https://api.nuget.org/v3/index.json
+    dotnet nuget push JSopxNewApp.SharedLib.1.0.0.nupkg -k <YOUR_API_KEY> -s https://api.nuget.org/v3/index.json
     ```
 
 ## 2. Using .NET 8 Class Libraries in Blazor Projects
@@ -667,31 +668,31 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a Blazor WebAssembly Project:**
 
     ```bash
-    dotnet new blazorwasm -n MyApp.Blazor
+    dotnet new blazorwasm -n JSopxNewApp.Blazor
     ```
 
 2. **Add Project References:**
 
-    **`MyApp.Blazor/MyApp.Blazor.csproj`:**
+    **`JSopxNewApp.Blazor/JSopxNewApp.Blazor.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedLib\MyApp.SharedLib.csproj" />
-        <ProjectReference Include="..\MyApp.UIComponents\MyApp.UIComponents.csproj" />
+        <ProjectReference Include="..\JSopxNewApp.SharedLib\JSopxNewApp.SharedLib.csproj" />
+        <ProjectReference Include="..\JSopxNewApp.UIComponents\JSopxNewApp.UIComponents.csproj" />
       </ItemGroup>
     </Project>
     ```
 
 3. **Use Shared Library and Razor Components:**
 
-    **`MyApp.Blazor/Pages/Index.razor`:**
+    **`JSopxNewApp.Blazor/Pages/Index.razor`:**
     ```razor
     @page "/"
-    @using MyApp.SharedLib.Utilities
-    @using MyApp.UIComponents.Components
+    @using JSopxNewApp.SharedLib.Utilities
+    @using JSopxNewApp.UIComponents.Components
 
     <h3>@StringHelper.ToTitleCase("hello, world!")</h3>
     <HelloWorld />
@@ -704,13 +705,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-react/src/App.js`:**
+    **`jsopx-new-app-in-react/src/App.js`:**
     ```javascript
     import React, { useState, useEffect } from 'react';
     import axios from 'axios';
@@ -740,13 +741,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-vue/src/App.vue`:**
+    **`jsopx-new-app-in-vue/src/App.vue`:**
     ```html
     <template>
       <div>
@@ -778,13 +779,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-angular/src/app/app.component.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.component.ts`:**
     ```typescript
     import { HttpClient } from '@angular/common/http';
     import { Component, OnInit } from '@angular/core';
@@ -805,7 +806,7 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
     }
     ```
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -841,8 +842,8 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.SharedResources
-        /MyApp.SharedResources.csproj
+      /JSopxNewApp.SharedResources
+        /JSopxNewApp.SharedResources.csproj
         /wwwroot
           /css
             /styles.css
@@ -857,7 +858,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
 2. **Configure the Project File:**
 
-    **`MyApp.SharedResources.csproj`:**
+    **`JSopxNewApp.SharedResources.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Razor">
       <PropertyGroup>
@@ -879,21 +880,21 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.Api
-        /MyApp.Api.csproj
-      /MyApp.SharedResources
+      /JSopxNewApp.WebAPI
+        /JSopxNewApp.WebAPI.csproj
+      /JSopxNewApp.SharedResources
     ```
 
 2. **Configure the Project File:**
 
-    **`MyApp.Api.csproj`:**
+    **`JSopxNewApp.WebAPI.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Web">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedResources\MyApp.SharedResources.csproj" />
+        <ProjectReference Include="..\JSopxNewApp.SharedResources\JSopxNewApp.SharedResources.csproj" />
       </ItemGroup>
     </Project>
     ```
@@ -951,15 +952,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-react/public/index.html`:**
+    **`jsopx-new-app-in-react/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -979,15 +980,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-vue/public/index.html`:**
+    **`jsopx-new-app-in-vue/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -1007,15 +1008,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Static Files:**
 
     Modify `index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-angular/src/index.html`:**
+    **`jsopx-new-app-in-angular/src/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -1034,7 +1035,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
     Add `HttpClientModule` to `app.module.ts` to ensure API requests work.
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -1072,7 +1073,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 - **ASP.NET Core Project:**
     ```
     /src
-      /MyApp.Api
+      /JSopxNewApp.WebAPI
         /wwwroot
           /css
             /styles.css
