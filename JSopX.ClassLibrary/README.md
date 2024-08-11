@@ -1,17 +1,10 @@
 # JSopX™ Class Library Asp.NET Core OpenX Project
 ### from the ﻿jSilvestri.com BETA v 2024 JSopX™ OpenX Demo Collection Project
 ### Phase 1
+> [!IMPORTANT]
+> This Project is in Phase 1 of 4. It should be treated as simply reference material for now. Conversely, Phase 2 is days away, and Phase 3 is only a week after that. Phase 3 Projects will be more mature, and action-packed with features, assets and more!
+
 The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com BETA v 2024 JSopX™ Open Demo Collections ASP.NET Core 8 Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. 
-
-
-## Authors:
-- For author information, please refer to the [jsopx-authors](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/JSopX.ClassLibrary/docs/includes/jsopx-authors.md).
-
-or
-
-Below:
-
-[include](https://github.com/JasonSilvestri/JSopX.ClassLibrary/blob/master/JSopX.ClassLibrary/docs/includes/jsopx-authors.md)
 
 ## Overview
 
@@ -20,6 +13,26 @@ The `jSilvestri.com BETA v 2024` mobile and web applications, developed for most
 The `JSopX.ClassLibrary` application (i.e., jSilvestri.com BETA v 2024 JSopX™ Class Library) in specific, is a FREE, open-source, custom, reusable, jSilvestri.com BETA v 2024 JSopX™ Open Demo Collections ASP.NET Core 8 Class Library, designed to hold common constants, enums, and helper classes that can be shared across multiple projects. This library promotes code reuse, reduces duplication, and simplifies maintenance. 
 
 Many applications in the `Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection`, such as the `Angular Web API Demo`, `Blazor Web API Demo`, `React Web API Demo`, and `Vue Web API Demo` applications will use this project to reference common features throughout the collective applications.
+
+
+## Alerts
+
+Please pay close attention to the alerts that appear in documentation that look like the following:
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
 
 ### Prerequisites
 

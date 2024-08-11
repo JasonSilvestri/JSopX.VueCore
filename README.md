@@ -347,8 +347,8 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.SharedResources
-        /MyApp.SharedResources.csproj
+      /JSopXNewAppIn.SharedResources
+        /JSopXNewAppIn.SharedResources.csproj
         /wwwroot
           /css
             /styles.css
@@ -363,7 +363,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
 2. **Configure the Project File:**
 
-    **`MyApp.SharedResources.csproj`:**
+    **`JSopXNewAppIn.SharedResources.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Razor">
       <PropertyGroup>
@@ -385,21 +385,21 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.Api
-        /MyApp.Api.csproj
-      /MyApp.SharedResources
+      /JSopXNewAppIn.Api
+        /JSopXNewAppIn.Api.csproj
+      /JSopXNewAppIn.SharedResources
     ```
 
 2. **Configure the Project File:**
 
-    **`MyApp.Api.csproj`:**
+    **`JSopXNewAppIn.Api.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Web">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedResources\MyApp.SharedResources.csproj" />
+        <ProjectReference Include="..\JSopXNewAppIn.SharedResources\JSopXNewAppIn.SharedResources.csproj" />
       </ItemGroup>
     </Project>
     ```
@@ -457,15 +457,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-react/public/index.html`:**
+    **`jsopx-new-app-in-react/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -485,15 +485,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-vue/public/index.html`:**
+    **`jsopx-new-app-in-vue/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -513,15 +513,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Static Files:**
 
     Modify `index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-angular/src/index.html`:**
+    **`jsopx-new-app-in-angular/src/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -540,7 +540,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
     Add `HttpClientModule` to `app.module.ts` to ensure API requests work.
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -578,7 +578,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 - **ASP.NET Core Project:**
     ```
     /src
-      /MyApp.Api
+      /JSopXNewAppIn.Api
         /wwwroot
           /css
             /styles.css
@@ -608,14 +608,14 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create the Class Library Project:**
 
     ```bash
-    dotnet new classlib -n MyApp.SharedLib
+    dotnet new classlib -n JSopXNewAppIn.SharedLib
     ```
 
 2. **Add Business Logic to the Class Library:**
 
-    **`MyApp.SharedLib/StringHelper.cs`:**
+    **`JSopXNewAppIn.SharedLib/StringHelper.cs`:**
     ```csharp
-    namespace MyApp.SharedLib.Utilities
+    namespace JSopXNewAppIn.SharedLib.Utilities
     {
         public static class StringHelper
         {
@@ -631,12 +631,12 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 3. **Create a Razor Class Library Project (for UI Components):**
 
     ```bash
-    dotnet new razorclasslib -n MyApp.UIComponents
+    dotnet new razorclasslib -n JSopXNewAppIn.UIComponents
     ```
 
 4. **Add Razor Components:**
 
-    **`MyApp.UIComponents/Components/HelloWorld.razor`:**
+    **`JSopXNewAppIn.UIComponents/Components/HelloWorld.razor`:**
     ```razor
     <h3>Hello, world!</h3>
     ```
@@ -645,7 +645,7 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 
     ```bash
     dotnet pack -c Release
-    dotnet nuget push MyApp.SharedLib.1.0.0.nupkg -k <YOUR_API_KEY> -s https://api.nuget.org/v3/index.json
+    dotnet nuget push JSopXNewAppIn.SharedLib.1.0.0.nupkg -k <YOUR_API_KEY> -s https://api.nuget.org/v3/index.json
     ```
 
 ## 2. Using .NET 8 Class Libraries in Blazor Projects
@@ -655,31 +655,31 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a Blazor WebAssembly Project:**
 
     ```bash
-    dotnet new blazorwasm -n MyApp.Blazor
+    dotnet new blazorwasm -n JSopXNewAppIn.Blazor
     ```
 
 2. **Add Project References:**
 
-    **`MyApp.Blazor/MyApp.Blazor.csproj`:**
+    **`JSopXNewAppIn.Blazor/JSopXNewAppIn.Blazor.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedLib\MyApp.SharedLib.csproj" />
-        <ProjectReference Include="..\MyApp.UIComponents\MyApp.UIComponents.csproj" />
+        <ProjectReference Include="..\JSopXNewAppIn.SharedLib\JSopXNewAppIn.SharedLib.csproj" />
+        <ProjectReference Include="..\JSopXNewAppIn.UIComponents\JSopXNewAppIn.UIComponents.csproj" />
       </ItemGroup>
     </Project>
     ```
 
 3. **Use Shared Library and Razor Components:**
 
-    **`MyApp.Blazor/Pages/Index.razor`:**
+    **`JSopXNewAppIn.Blazor/Pages/Index.razor`:**
     ```razor
     @page "/"
-    @using MyApp.SharedLib.Utilities
-    @using MyApp.UIComponents.Components
+    @using JSopXNewAppIn.SharedLib.Utilities
+    @using JSopXNewAppIn.UIComponents.Components
 
     <h3>@StringHelper.ToTitleCase("hello, world!")</h3>
     <HelloWorld />
@@ -692,13 +692,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-react/src/App.js`:**
+    **`jsopx-new-app-in-react/src/App.js`:**
     ```javascript
     import React, { useState, useEffect } from 'react';
     import axios from 'axios';
@@ -728,13 +728,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-vue/src/App.vue`:**
+    **`jsopx-new-app-in-vue/src/App.vue`:**
     ```html
     <template>
       <div>
@@ -766,13 +766,13 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Data from ASP.NET Core API:**
 
-    **`my-app-angular/src/app/app.component.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.component.ts`:**
     ```typescript
     import { HttpClient } from '@angular/common/http';
     import { Component, OnInit } from '@angular/core';
@@ -793,7 +793,7 @@ This guide provides an overview of how to create and utilize .NET 8 Class Librar
     }
     ```
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -829,8 +829,8 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.SharedResources
-        /MyApp.SharedResources.csproj
+      /JSopXNewAppIn.SharedResources
+        /JSopXNewAppIn.SharedResources.csproj
         /wwwroot
           /css
             /styles.css
@@ -845,7 +845,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
 2. **Configure the Project File:**
 
-    **`MyApp.SharedResources.csproj`:**
+    **`JSopXNewAppIn.SharedResources.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Razor">
       <PropertyGroup>
@@ -867,21 +867,21 @@ This guide provides an overview of how to create an All-in-One approach to manag
     **File Structure:**
     ```
     /src
-      /MyApp.Api
-        /MyApp.Api.csproj
-      /MyApp.SharedResources
+      /JSopXNewAppIn.Api
+        /JSopXNewAppIn.Api.csproj
+      /JSopXNewAppIn.SharedResources
     ```
 
 2. **Configure the Project File:**
 
-    **`MyApp.Api.csproj`:**
+    **`JSopXNewAppIn.Api.csproj`:**
     ```xml
     <Project Sdk="Microsoft.NET.Sdk.Web">
       <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
       </PropertyGroup>
       <ItemGroup>
-        <ProjectReference Include="..\MyApp.SharedResources\MyApp.SharedResources.csproj" />
+        <ProjectReference Include="..\JSopXNewAppIn.SharedResources\JSopXNewAppIn.SharedResources.csproj" />
       </ItemGroup>
     </Project>
     ```
@@ -939,15 +939,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a React Project:**
 
     ```bash
-    npx create-react-app my-app-react
-    cd my-app-react
+    npx create-react-app jsopx-new-app-in-react
+    cd jsopx-new-app-in-react
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-react/public/index.html`:**
+    **`jsopx-new-app-in-react/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -967,15 +967,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create a Vue Project:**
 
     ```bash
-    npm init vue@3 my-app-vue
-    cd my-app-vue
+    npm init vue@3 jsopx-new-app-in-vue
+    cd jsopx-new-app-in-vue
     ```
 
 2. **Fetch Static Files:**
 
     Modify `public/index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-vue/public/index.html`:**
+    **`jsopx-new-app-in-vue/public/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -995,15 +995,15 @@ This guide provides an overview of how to create an All-in-One approach to manag
 1. **Create an Angular Project:**
 
     ```bash
-    ng new my-app-angular
-    cd my-app-angular
+    ng new jsopx-new-app-in-angular
+    cd jsopx-new-app-in-angular
     ```
 
 2. **Fetch Static Files:**
 
     Modify `index.html` to load static resources from the ASP.NET Core backend.
 
-    **`my-app-angular/src/index.html`:**
+    **`jsopx-new-app-in-angular/src/index.html`:**
     ```html
     <!DOCTYPE html>
     <html lang="en">
@@ -1022,7 +1022,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 
     Add `HttpClientModule` to `app.module.ts` to ensure API requests work.
 
-    **`my-app-angular/src/app/app.module.ts`:**
+    **`jsopx-new-app-in-angular/src/app/app.module.ts`:**
     ```typescript
     import { BrowserModule } from '@angular/platform-browser';
     import { NgModule } from '@angular/core';
@@ -1060,7 +1060,7 @@ This guide provides an overview of how to create an All-in-One approach to manag
 - **ASP.NET Core Project:**
     ```
     /src
-      /MyApp.Api
+      /JSopXNewAppIn.Api
         /wwwroot
           /css
             /styles.css
