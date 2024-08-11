@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SignAssembly>False</SignAssembly>
+    <Company>jSilvestri.com</Company>
+    <Copyright>© 2024 Jason Silvestri. All Rights Reserved</Copyright>
+    <Authors>Jason Silvestri</Authors>
+    <Product>JSopX™ Asp.NET Core Class Library Project</Product>
+    <Description>The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the jSilvestri.com BETA v 2024 Open Demo Collection. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.</Description>
+    <Title>JSopX™ Asp.NET Core Class Library Project: Phase 1</Title>
+    <PackageProjectUrl>https://github.com/JasonSilvestri/JSopX.ClassLibrary</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.ClassLibrary.git</RepositoryUrl>
+    <PackageReleaseNotes>The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the jSilvestri.com BETA v 2024 Open Demo Collection. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
