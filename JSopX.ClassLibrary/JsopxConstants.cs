@@ -373,7 +373,7 @@ namespace Jsopx.ClassLibrary
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
                     public const string JSopXClassLibrary = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.";
-                    
+
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
@@ -446,7 +446,7 @@ namespace Jsopx.ClassLibrary
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
                     public const string JSopXClassLibrary = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects.";
-                    
+
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
@@ -521,7 +521,7 @@ namespace Jsopx.ClassLibrary
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
                     public const string JsopxMainProjectName = "https://github.com/JasonSilvestri/JSopX.OpenProjectX";
-                  
+
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
@@ -2766,21 +2766,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string JsopxAppVer = JsopxAppProjects.ProductVersions.JsopxAngularJsProject;
+                        public const string JsopxAppVer = JsopxAppProjects.ProductVersions.JsopxVueProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxAngularJsProject;
+                        public const string Title = JsopxAppProjects.Names.Short.JsopxVueProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxAngularJsProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxVueProject;
 
 
                         /// <summary>
@@ -2788,7 +2788,7 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxAngularJsProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxVueProject;
 
                     }
                 }
