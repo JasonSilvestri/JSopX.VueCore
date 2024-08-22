@@ -1,8 +1,61 @@
 ﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System;
+
+// NEW! Create Unsigned Friend Assemblies that can access the Internal properties
+// we often use to protect sensitive data where a secure data store or vault isn't
+// yet present to do similar.
+
+// Read More on What I Did Below to Create Unsigned Assembly Friends:
+//https://learn.microsoft.com/en-us/dotnet/standard/assembly/friend
+
+// Also, we will want to modify the below when we decide to sign each assembly (and some should be signed
+// sooner than not). However, if we sign Class Library, we need to also sign friends, and this 
+// Library's friends are just about every every project. So, yeah.
+//
+// We need to wait until the collective projects are more mature before making this move.
+
+// Read More on What I Need to Do Below to Create Signed Assembly Friends:
+// https://learn.microsoft.com/en-us/dotnet/standard/assembly/create-signed-friend
+
+// Also, below would be the static types for assembly names.
+// However, a large part of why static constants are so important is
+// in cases just like this, where it is rare to be able to most other
+// structs, but yet, here we are, reducing static string use.
+
+// So.... If We Never Created Static Constants....
+
+//[assembly: InternalsVisibleTo("JSopX.OpenProjectX")]
+//[assembly: InternalsVisibleTo("JSopX.BridgeTooFar")]
+//[assembly: InternalsVisibleTo("JSopX.WebAPI")]
+//[assembly: InternalsVisibleTo("JSopX.SharedResources")]
+//[assembly: InternalsVisibleTo("JSopX.RCLxProper")]
+//[assembly: InternalsVisibleTo("JSopX.RCLxAssets")]
+//[assembly: InternalsVisibleTo("JSopX.RCLxComponents")]
+//[assembly: InternalsVisibleTo("JSopX.AngularCore")]
+//[assembly: InternalsVisibleTo("JSopX.ReactCore")]
+//[assembly: InternalsVisibleTo("JSopX.VueCore")]
+//[assembly: InternalsVisibleTo("JSopX.AspNetCore")]
+//[assembly: InternalsVisibleTo("JSopX.BlazorServerCore")]
+//[assembly: InternalsVisibleTo("JSopX.MauiHybridNetCore")]
+
+// But We Took the Time to, so....
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.OpenProjectX)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.BridgeTooFar)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.WebAPI)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.SharedResources)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxProper)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxAssets)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxComponents)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.AngularCore)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.ReactCore)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.VueCore)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.AspNetCore)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.BlazorServerCore)]
+[assembly: InternalsVisibleTo(Jsopx.ClassLibrary.JsopxConstants.WebAppDemoSettings.StronglyTypedAssemblyNames.MauiHybridNetCore)]
 
 namespace Jsopx.ClassLibrary
 {
-
 
     /// <summary>
     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class for handling all product information across 
@@ -34,6 +87,7 @@ namespace Jsopx.ClassLibrary
     /// declarations, and more secure practices as we progress through the phases.
     /// </para>
     /// </summary>
+   
     public static class JsopxConstants
     {
 
@@ -185,80 +239,85 @@ namespace Jsopx.ClassLibrary
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxMainProjectName = "jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection Project";
+                    public const string OpenProjectX = "jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Collection Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxAngularJsProject = "JSopX™ Angular Asp.NET Core Open Project EXperiences";
+                    public const string BridgeTooFarProject = "JSopX™ Bridge Too Far Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "JSopX™ Asp.NET Core Open Project EXperiences";
+                    public const string AngularCoreProject = "JSopX™ Angular Asp.NET Core Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxBlazorProject = "JSopX™ Blazor Asp.NET Core Open Project EXperiences";
+                    public const string AspNetCoreProject = "JSopX™ Asp.NET Core Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxReactJsProject = "JSopX™ React Asp.NET Core Open Project EXperiences";
+                    public const string BlazorServerCoreProject = "JSopX™ Blazor Asp.NET Core Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxVueProject = "JSopX™ Vue Asp.NET Core Open Project EXperiences";
+                    public const string ReactCoreProject = "JSopX™ React Asp.NET Core Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxMAUIProject = "JSopX™ .NET MAUI Hybrid Open Project EXperiences";
+                    public const string VueCoreProject = "JSopX™ Vue Asp.NET Core Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxWebApiProject = "JSopX™ Asp.NET Core WebAPI Project";
+                    public const string MauiHybridCoreProject = "JSopX™ .NET MAUI Hybrid Open Project EXperience";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxClassLibraryProject = "JSopX™ Asp.NET Core Class Library Project";
+                    public const string WebApiProject = "JSopX™ Asp.NET Core WebAPI Project";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JsopxSharedResourcesProject = "JSopX™ Asp.NET Core Shared Resources Project";
-
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
-                    /// </summary>
-                    public const string JSopxRazorProperProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Proper Project";
+                    public const string ClassLibraryProject = "JSopX™ Asp.NET Core Class Library Project";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JSopxRazorAssetsProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Assets Project";
+                    public const string SharedResourcesProject = "JSopX™ Asp.NET Core Shared Resources Project";
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Default</c> Product names.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
                     /// </summary>
-                    public const string JSopxRazorComponentsProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Components Project";
+                    public const string RCLxProperProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Proper Project";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
+                    /// </summary>
+                    public const string RCLxAssetsProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Assets Project";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperience <c>Default</c> Product names.
+                    /// </summary>
+                    public const string RCLxComponentsProject = "JSopX™ Asp.NET Core (RCL) Razor Class Library Components Project";
                 }
 
 
@@ -272,80 +331,85 @@ namespace Jsopx.ClassLibrary
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxMainProjectName = "JSopX™ Jason Silvestri Open Project EXperiences Collection Project";
+                    public const string OpenProjectX = "JSopX™ Jason Silvestri Open Project EXperiences Collection Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxAngularJsProject = "JSopX™ Angular Asp.NET Core Project";
+                    public const string BridgeTooFarProject = "JSopX™ Angular Asp.NET Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "JSopX™ Asp.NET Core Project";
+                    public const string AngularCoreProject = "JSopX™ Angular Asp.NET Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxBlazorProject = "JSopX™ Blazor Core Project";
+                    public const string AspNetCoreProject = "JSopX™ Asp.NET Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxReactJsProject = "JSopX™ React Core Project";
+                    public const string BlazorServerCoreProject = "JSopX™ Blazor Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxVueProject = "JSopX™ Vue Core Project";
+                    public const string ReactCoreProject = "JSopX™ React Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxMAUIProject = "JSopX™ MAUI Hybrid Project";
+                    public const string VueCoreProject = "JSopX™ Vue Core Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxWebApiProject = "JSopX™ Asp.NET Core WebAPI";
+                    public const string MauiHybridCoreProject = "JSopX™ MAUI Hybrid Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxClassLibraryProject = "JSopX™ Class Library Project";
+                    public const string WebApiProject = "JSopX™ Asp.NET Core WebAPI";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JsopxSharedResourcesProject = "JSopX™ Shared Resources Project";
-
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
-                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
-                    /// </summary>
-                    public const string JSopxRazorProperProject = "JSopX™ (RCL) Razor Class Library Proper Project";
+                    public const string ClassLibraryProject = "JSopX™ Class Library Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JSopxRazorAssetsProject = "JSopX™ (RCL) Razor Class Library Assets Project";
+                    public const string SharedResourcesProject = "JSopX™ Shared Resources Project";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
                     /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
                     /// </summary>
-                    public const string JSopxRazorComponentsProject = "JSopX™ (RCL) Razor Class Library Components Project";
+                    public const string RCLxProperProject = "JSopX™ (RCL) Razor Class Library Proper Project";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
+                    /// </summary>
+                    public const string RCLxAssetsProject = "JSopX™ (RCL) Razor Class Library Assets Project";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle all jSilvestri.com 2024
+                    /// jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences <c>Short</c> Product names.
+                    /// </summary>
+                    public const string RCLxComponentsProject = "JSopX™ (RCL) Razor Class Library Components Project";
                 }
 
             }
@@ -367,67 +431,72 @@ namespace Jsopx.ClassLibrary
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxMainProject = "The jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection Project is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various back-end and front-end frameworks (i.e., Angular, Blazor, React, Vue, MAUI Hybrid, etc.) with ASP.NET Core 8 back-end, which includes a Web API, Class Libraries and Razor Libraries used as the same shared assets across all projects (by design). This collection serves as a learning resource and reference for developers looking to understand and implement modern web application architectures using these technologies.";
+                    public const string OpenProjectX = "The jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection Project is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various back-end and front-end frameworks (i.e., Angular, Blazor, React, Vue, MAUI Hybrid, etc.) with ASP.NET Core 8 back-end, which includes a Web API, Class Libraries and Razor Libraries used as the same shared assets across all projects (by design). This collection serves as a learning resource and reference for developers looking to understand and implement modern web application architectures using these technologies.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JSopXClassLibrary = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.";
+                    public const string BridgeTooFarProject = "The JSopX™ Bridge Too Far Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxSharedResources = "The JSopX™ Shared Resources Class Library Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects. It was originally created to show resources being shared across client-side and server-side projects, even though they are more traditionally used to share these resources in server-side .NET projects.";
+                    public const string ClassLibraryProject = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects. This project aims to promote code reuse and maintainability by centralizing shared logic in a single location.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorClassLibraryProper = "The JSopX™ (RCL) Razor Class Library Proper Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects more efficiently, and created to show resources being shared across the more modern client-side and server-side projects (i.e., Asp.NET Core, Blazor, Angular, React, Vue, etc.).";
+                    public const string SharedResourcesProject = "The JSopX™ Shared Resources Class Library Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects. It was originally created to show resources being shared across client-side and server-side projects, even though they are more traditionally used to share these resources in server-side .NET projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorClassLibraryAssets = "The JSopX™ (RCL) Razor Class Library Assets Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects more efficiently, and created to show resources being shared across the more modern client-side and server-side projects (i.e., Asp.NET Core, Blazor, Angular, React, Vue, etc.).";
+                    public const string RCLxProperProject = "The JSopX™ (RCL) Razor Class Library Proper Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects more efficiently, and created to show resources being shared across the more modern client-side and server-side projects (i.e., Asp.NET Core, Blazor, Angular, React, Vue, etc.).";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorComponents = "The JSopX™ (RCL) Razor Class Library Razor Project is a project that contains shared resources specifically for Razor Components being used in our Blazor, and .NET MAUI Hybrid Projects. This is not intended for use in client-side and server-side assets sharing like the other class libraries in the Open Project EXperiences Collection of Projects (e.g., not intended for assets sharing with Angular, React, Vue, etc.). This project does aim to still maintain consistency and avoid duplication resources, but just with razor components and not assets directly.";
+                    public const string RCLxAssetsProject = "The JSopX™ (RCL) Razor Class Library Assets Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects. This project aims to maintain consistency and avoid duplication of resources across different projects more efficiently, and created to show resources being shared across the more modern client-side and server-side projects (i.e., Asp.NET Core, Blazor, Angular, React, Vue, etc.).";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxWebApiProject = "The JSopX™ Web API Project is a custom project that implements an ASP.NET Core 8 Web API, serving as the back-end for the various web applications in the Open Project EXperiences Collection of Projects. It provides RESTful API endpoints for data retrieval and manipulation, showcasing best practices in API development and integration with front-end frameworks.";
+                    public const string RCLxComponentsProject = "The JSopX™ (RCL) Razor Class Library Razor Project is a project that contains shared resources specifically for Razor Components being used in our Blazor, and .NET MAUI Hybrid Projects. This is not intended for use in client-side and server-side assets sharing like the other class libraries in the Open Project EXperiences Collection of Projects (e.g., not intended for assets sharing with Angular, React, Vue, etc.). This project does aim to still maintain consistency and avoid duplication resources, but just with razor components and not assets directly.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "The JSopX™ Asp.NET Core Open Project EXperiences is a demonstration project showcasing how to build a web application using ASP.NET Core 8 Web API. It highlights the integration of Asp.NET Core for the server-side, providing a comprehensive example of a modern web application server-side stack.";
+                    public const string WebApiProject = "The JSopX™ Web API Project is a custom project that implements an ASP.NET Core 8 Web API, serving as the back-end for the various web applications in the Open Project EXperiences Collection of Projects. It provides RESTful API endpoints for data retrieval and manipulation, showcasing best practices in API development and integration with front-end frameworks.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxAngularJsProject = "The JSopX™ Angular Core Open Project EXperiences is a demonstration project showcasing how to build a web application using Angular and ASP.NET Core 8 Web API. It highlights the integration of Angular for the client-side with ASP.NET Core for the server-side, providing a comprehensive example of a modern web application stack.";
+                    public const string AspNetCoreProject = "The JSopX™ Asp.NET Core Open Project EXperiences is a demonstration project showcasing how to build a web application using ASP.NET Core 8 Web API. It highlights the integration of Asp.NET Core for the server-side, providing a comprehensive example of a modern web application server-side stack.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxBlazorProject = "The JSopX™ Blazor Server Core Open Project EXperiences is a demonstration project that illustrates how to construct a web application using Blazor Server and ASP.NET Core 8 Web API. This project highlights the use of Blazor for building interactive web UIs with C# and ASP.NET Core for providing powerful server-side capabilities.";
+                    public const string AngularCoreProject = "The JSopX™ Angular Core Open Project EXperiences is a demonstration project showcasing how to build a web application using Angular and ASP.NET Core 8 Web API. It highlights the integration of Angular for the client-side with ASP.NET Core for the server-side, providing a comprehensive example of a modern web application stack.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxReactJsProject = "The JSopX™ React Core Open Project EXperiences is a demonstration project designed to illustrate how to create a web application using React and ASP.NET Core 8 Web API. This project exemplifies the combination of React for building dynamic user interfaces with ASP.NET Core for developing robust server-side APIs.";
+                    public const string BlazorServerCoreProject = "The JSopX™ Blazor Server Core Open Project EXperiences is a demonstration project that illustrates how to construct a web application using Blazor Server and ASP.NET Core 8 Web API. This project highlights the use of Blazor for building interactive web UIs with C# and ASP.NET Core for providing powerful server-side capabilities.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxVueProject = "The JSopX™ Vue Core Open Project EXperiences is a demonstration project intended to demonstrate how to develop a web application using Vue and ASP.NET Core 8 Web API. It showcases the seamless integration of Vue for the front-end and ASP.NET Core for the back-end, offering a clear example of a full-stack web development approach.";
+                    public const string ReactCoreProject = "The JSopX™ React Core Open Project EXperiences is a demonstration project designed to illustrate how to create a web application using React and ASP.NET Core 8 Web API. This project exemplifies the combination of React for building dynamic user interfaces with ASP.NET Core for developing robust server-side APIs.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
                     /// </summary>
-                    public const string JsopxMAUIProject = "The JSopX™ .NET MAUI Hybrid Demo Project is a demonstration project intended to demonstrate how to develop a multi-platform application using Asp.NET Core Razor Components to construct and all-in-one solution to deploy your MAUI application as a Web application, a Windows and Mac Desktop application, and native mobile applications for Windows Phone, iPhone, Andriod and Samsung.";
+                    public const string VueCoreProject = "The JSopX™ Vue Core Open Project EXperiences is a demonstration project intended to demonstrate how to develop a web application using Vue and ASP.NET Core 8 Web API. It showcases the seamless integration of Vue for the front-end and ASP.NET Core for the back-end, offering a clear example of a full-stack web development approach.";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Default</c> product description. 
+                    /// </summary>
+                    public const string MauiHybridCoreProject = "The JSopX™ .NET MAUI Hybrid Demo Project is a demonstration project intended to demonstrate how to develop a multi-platform application using Asp.NET Core Razor Components to construct and all-in-one solution to deploy your MAUI application as a Web application, a Windows and Mac Desktop application, and native mobile applications for Windows Phone, iPhone, Andriod and Samsung.";
 
                 }
 
@@ -440,67 +509,72 @@ namespace Jsopx.ClassLibrary
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxMainProject = "The jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection Project is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various back-end and front-end frameworks (i.e., Angular, Blazor, React, Vue, MAUI Hybrid, etc.) with ASP.NET Core 8 back-end, which includes a Web API, Class Libraries and Razor Libraries used as the same shared assets across all projects (by design).";
+                    public const string OpenProjectX = "The jSilvestri.com BETA v 2024 JSopX™ Open Demo Collection Project is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various back-end and front-end frameworks (i.e., Angular, Blazor, React, Vue, MAUI Hybrid, etc.) with ASP.NET Core 8 back-end, which includes a Web API, Class Libraries and Razor Libraries used as the same shared assets across all projects (by design).";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JSopXClassLibrary = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects.";
+                    public const string BridgeTooFarProject = "The JSopX™ Bridge Too Far Project is a project containing reusable static assets, documentation, and other .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxSharedResources = "The JSopX™ Shared Resources Class Library Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the Open Project EXperiences Collection of Projects.";
+                    public const string ClassLibraryProject = "The JSopX™ Class Library Project is a project containing reusable .NET class libraries that provide common functionalities and utilities used across different web applications within the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorClassLibraryProper = "The JSopX™ (RCL) Razor Class Library Proper Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects.";
+                    public const string SharedResourcesProject = "The JSopX™ Shared Resources Class Library Project is a project that contains shared resources such as images, styles, and scripts used across multiple web applications in the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorClassLibraryAssets = "The JSopX™ (RCL) Razor Class Library Assets Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects.";
+                    public const string RCLxProperProject = "The JSopX™ (RCL) Razor Class Library Proper Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JSopxRazorComponents = "The JSopX™ (RCL) Razor Class Library Razor Project is a project that contains shared resources specifically for Razor Components being used in our Blazor, and .NET MAUI Hybrid Projects.";
+                    public const string RCLxAssetsProject = "The JSopX™ (RCL) Razor Class Library Assets Project is a project that contains shared resources such as images, styles, and scripts used across multiple client-side and server-side web applications in the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxWebApiProject = "The JSopX™ Web API Project is a custom project that implements an ASP.NET Core 8 Web API, serving as the back-end for ALL client-side and server-side web, desktop and mobile applications in the Open Project EXperiences Collection of Projects.";
+                    public const string RCLxComponentsProject = "The JSopX™ (RCL) Razor Class Library Razor Project is a project that contains shared resources specifically for Razor Components being used in our Blazor, and .NET MAUI Hybrid Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "The JSopX™ Asp.NET Core Open Project EXperiences is a demonstration project showcasing how to build a web application using ASP.NET Core 8 Web API.";
+                    public const string WebApiProject = "The JSopX™ Web API Project is a custom project that implements an ASP.NET Core 8 Web API, serving as the back-end for ALL client-side and server-side web, desktop and mobile applications in the Open Project EXperiences Collection of Projects.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxAngularJsProject = "The JSopX™ Angular Core Open Project EXperiences is a demonstration project showcasing how to build a web application using Angular and ASP.NET Core 8 Web API.";
+                    public const string AspNetCoreProject = "The JSopX™ Asp.NET Core Open Project EXperiences is a demonstration project showcasing how to build a web application using ASP.NET Core 8 Web API.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxBlazorProject = "The JSopX™ Blazor Server Core Open Project EXperiences is a demonstration project that illustrates how to construct a web application using Blazor Server and ASP.NET Core 8 Web API.";
+                    public const string AngularCoreProject = "The JSopX™ Angular Core Open Project EXperiences is a demonstration project showcasing how to build a web application using Angular and ASP.NET Core 8 Web API.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxReactJsProject = "The JSopX™ React Core Open Project EXperiences is a demonstration project designed to illustrate how to create a web application using React and ASP.NET Core 8 Web API.";
+                    public const string BlazorServerCoreProject = "The JSopX™ Blazor Server Core Open Project EXperiences is a demonstration project that illustrates how to construct a web application using Blazor Server and ASP.NET Core 8 Web API.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxVueProject = "The JSopX™ Vue Core Open Project EXperiences is a demonstration project intended to demonstrate how to develop a web application using Vue and ASP.NET Core 8 Web API.";
+                    public const string ReactCoreProject = "The JSopX™ React Core Open Project EXperiences is a demonstration project designed to illustrate how to create a web application using React and ASP.NET Core 8 Web API.";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
                     /// </summary>
-                    public const string JsopxMAUIProject = "The JSopX™ .NET MAUI Hybrid Demo Project is a demonstration project intended to demonstrate how to develop a multi-platform applications that deploy to the Web, to Windows and Mac Desktop application, and native mobile applications for Windows Phone, iPhone, Andriod and Samsung.";
+                    public const string VueCoreProject = "The JSopX™ Vue Core Open Project EXperiences is a demonstration project intended to demonstrate how to develop a web application using Vue and ASP.NET Core 8 Web API.";
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used for the <c>Short</c> product description. 
+                    /// </summary>
+                    public const string MauiHybridCoreProject = "The JSopX™ .NET MAUI Hybrid Demo Project is a demonstration project intended to demonstrate how to develop a multi-platform applications that deploy to the Web, to Windows and Mac Desktop application, and native mobile applications for Windows Phone, iPhone, Andriod and Samsung.";
 
                 }
             }
@@ -511,79 +585,93 @@ namespace Jsopx.ClassLibrary
             /// </summary>
             public static class GitHubUrls
             {
+                /// <summary>
+                /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences root GitHub handle.
+                /// </summary>
+                public const string GitHubHandleName = "https://github.com/JasonSilvestri/";
+
+                /// <summary>
+                /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences root GitHub handle .git suffix.
+                /// </summary>
+                public const string GitHubRepoSuffix = ".git";
 
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle Product GitHub SEO friendly URLs (i.e., https://github.com/JasonSilvestri/JSopX.ClassLibrary).
                 /// </summary>
                 public static class SeoFriendlyUrls
                 {
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
-                    /// </summary>
-                    public const string JsopxMainProjectName = "https://github.com/JasonSilvestri/JSopX.OpenProjectX";
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "https://github.com/JasonSilvestri/JSopX.AspNetCore";
+                    public const string OpenXProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.OpenProjectX;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxAngularJsProject = "https://github.com/JasonSilvestri/JSopX.AngularCore";
+                    public const string BridgeTooFarProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.BridgeTooFar;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxBlazorProject = "https://github.com/JasonSilvestri/JSopX.BlazorServerCore";
+                    public const string ClassLibraryProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.ClassLibrary;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxReactJsProject = "https://github.com/JasonSilvestri/JSopX.ReactCore";
+                    public const string WebApiProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.WebAPI;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxVueProject = "https://github.com/JasonSilvestri/JSopX.VueCore";
+                    public const string SharedResourcesProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.SharedResources;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxMAUIProject = "https://github.com/JasonSilvestri/JSopX.MauiHybridNetCore";
+                    public const string RCLxProperProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxProper;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>
-                    public const string JsopxClassLibraryProject = "https://github.com/JasonSilvestri/JSopX.ClassLibrary";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
-                    /// </summary>
-                    public const string JsopxWebApiProject = "https://github.com/JasonSilvestri/JSopX.WebApi";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
-                    /// </summary>
-                    public const string JsopxSharedResourcesProject = "https://github.com/JasonSilvestri/JSopX.SharedResources";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
-                    /// </summary>
-                    public const string JsopxRazorProperProject = "https://github.com/JasonSilvestri/JSopX.RCLxProper";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
-                    /// </summary>
-                    public const string JsopxRazorAssetsProject = "https://github.com/JasonSilvestri/JSopX.RCLxAssets";
+                    public const string RCLxAssetsProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxAssets;
 
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
                     /// </summary>                  
-                    public const string JsopxRazorComponentsProject = "https://github.com/JasonSilvestri/JSopX.RCLxComponents";
+                    public const string RCLxComponentsProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxComponents;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string AspNetCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.AspNetCore;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string AngularCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.AngularCore;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string BlazorServerCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.BlazorServerCore;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string ReactCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.ReactCore;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string VueCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.VueCore;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub SEO friendly URL.
+                    /// </summary>
+                    public const string MauiHybridNetCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.MauiHybridNetCore;
 
                 }
-
 
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constants class used to handle Product GitHub physical '.git' repository URL of the project (i.e., https://github.com/JasonSilvestri/JSopX.ClassLibrary.git).
@@ -592,69 +680,74 @@ namespace Jsopx.ClassLibrary
                 {
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxMainProjectName = "https://github.com/JasonSilvestri/JSopX.OpenProjectX.git";
+                    public const string OpenXProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.OpenProjectX + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxAspNetCoreProject = "https://github.com/JasonSilvestri/JSopX.AspNetCore.git";
+                    public const string BridgeTooFarProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.BridgeTooFar + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxAngularJsProject = "https://github.com/JasonSilvestri/JSopX.AngularCore.git";
+                    public const string ClassLibraryProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.ClassLibrary + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxBlazorProject = "https://github.com/JasonSilvestri/JSopX.BlazorServerCore.git";
+                    public const string WebApiProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.WebAPI + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxReactJsProject = "https://github.com/JasonSilvestri/JSopX.ReactCore.git";
+                    public const string SharedResourcesProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.SharedResources + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxVueProject = "https://github.com/JasonSilvestri/JSopX.VueCore.git";
+                    public const string RCLxProperProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxProper + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>
-                    public const string JsopxMAUIProject = "https://github.com/JasonSilvestri/JSopX.MauiHybridNetCore.git";
+                    public const string RCLxAssetsProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxAssets + GitHubRepoSuffix;
 
                     /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
-                    /// </summary>
-                    public const string JsopxClassLibraryProject = "https://github.com/JasonSilvestri/JSopX.ClassLibrary.git";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
-                    /// </summary>
-                    public const string JsopxWebApiProject = "https://github.com/JasonSilvestri/JSopX.WebApi.git";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
-                    /// </summary>
-                    public const string JsopxSharedResourcesProject = "https://github.com/JasonSilvestri/JSopX.SharedResources.git";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
-                    /// </summary>
-                    public const string JsopxRazorProperProject = "https://github.com/JasonSilvestri/JSopX.RCLxProper.git";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
-                    /// </summary>
-                    public const string JsopxRazorAssetsProject = "https://github.com/JasonSilvestri/JSopX.RCLxAssets.git";
-
-                    /// <summary>
-                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub physical '.git' repository URL of the project.
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
                     /// </summary>                  
-                    public const string JsopxRazorComponentsProject = "https://github.com/JasonSilvestri/JSopX.RCLxComponents.git";
+                    public const string RCLxComponentsProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.RCLxComponents + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string AspNetCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.AspNetCore + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string AngularCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.AngularCore + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string BlazorCoreServerProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.BlazorServerCore + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string ReactCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.ReactCore + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string VueCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.VueCore + GitHubRepoSuffix;
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Project EXperiences Constant used to handle Product GitHub Official Repository URL.
+                    /// </summary>
+                    public const string MauiHybridNetCoreProject = GitHubHandleName + WebAppDemoSettings.StronglyTypedAssemblyNames.MauiHybridNetCore + GitHubRepoSuffix;
 
                 }
 
@@ -714,34 +807,311 @@ namespace Jsopx.ClassLibrary
         /// <para>
         /// This project is currently in Phase <c>1</c> of <c>4</c>, where deliberate "minimum viable product" 
         /// decisions are made to demonstrate the project's evolution across phases. It is important to note that 
-        /// storing sensitive data in variables (of most kinds) is not secure and should not be common practice.
+        /// storing sensitive data in variables (of most kinds) is not secure, and should not be common practice.
         /// </para>
         /// <para>
-        /// Still, this project will not follow the common "for simplicity's sake" approach often justified by developers 
-        /// when they provide code in documentation or as a form of volunteering either. Such practices go against the purpose of why I began 
-        /// developing these cross-platform, cross-resource applications. It is concerning that such bad practices 
-        /// are often encouraged across various projects and tech stacks, using both client-side and server-side 
-        /// approaches.
-        /// </para>
-        /// <para>
-        /// Moreover, using UserSecret files, app settings, and strongly typing static variables in your applications can 
-        /// expose them to security risks. At a minimum, consider using a cloud secure vault or encryption when 
-        /// re-using this code in your projects.
-        /// </para>
-        /// <para>
-        /// One of the primary reasons for the existence of this class, as well as its elaborate uses, is to avoid 
-        /// enforcing specific database uses, cloud storage, local storage solutions, and other decisions or 
-        /// implementations that increase setup overhead. This project will increasingly use sealed classes, internal 
-        /// declarations, and more secure practices as we progress through the phases.
+        /// Many of these constants will be redfined as <c>internal</c> propeties to secure their
+        /// sensitivity, and already have most projects (assemblies) declared as friends that can
+        /// access these future internal constants. Moreover, it is the best case until the projects
+        /// call for, and have access to, something more secure, like an Azure Vault object, for example.
         /// </para>
         /// </summary>
         public static class WebAppDemoSettings
         {
 
+            /// <summary>
+            /// Custom jSilvestri.com Constant used to handle the JWT Authentication token Issuer, a property
+            /// we will be using in the near future Phase of the application(s) release to handle 
+            /// authentication.
+            /// <para>
+            /// ⚠ IMPORTANT ⚠
+            /// </para>
+            /// <para>
+            /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+            /// ready release. It has been left as-is by design, to mimic minimum viable product business
+            /// requirement. In other words, the app does not yet require it, but it will in final releases
+            /// of the application where all applications call for the JWT authentication design 
+            /// pattern for login and authentication, using the various projects that will use it
+            /// for said authentication (i.e JSopX.Asp.NETCore, JSopX.BlazorServerCore, JSopX.AngularCore, JSopX.ReactCore, JSopX.VueCore, etc.)
+            /// </para>
+            /// </summary>
             public const string JwtIssuer = "YourIssuer";
+
+
+            /// <summary>
+            /// Custom jSilvestri.com Constant used to handle the JWT Authentication token Audience, a property
+            /// we will be using in the near future Phase of the application(s) release to handle 
+            /// authentication.
+            /// <para>
+            /// ⚠ IMPORTANT ⚠
+            /// </para>
+            /// <para>
+            /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+            /// ready release. It has been left as-is by design, to mimic minimum viable product business
+            /// requirement. In other words, the app does not yet require it, but it will in final releases
+            /// of the application where all applications call for the JWT authentication design 
+            /// pattern for login and authentication, using the various projects that will use it
+            /// for said authentication (i.e JSopX.Asp.NETCore, JSopX.BlazorServerCore, JSopX.AngularCore, JSopX.ReactCore, JSopX.VueCore, etc.)
+            /// </para>
+            /// </summary>
             public const string JwtAudience = "YourAudience";
+
+            /// <summary>
+            /// Custom jSilvestri.com Constant used to handle the JWT Authentication token Key, a property
+            /// we will be using in the near future Phase of the application(s) release to handle 
+            /// authentication.
+            /// <para>
+            /// ⚠ IMPORTANT ⚠
+            /// </para>
+            /// <para>
+            /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+            /// ready release. It has been left as-is by design, to mimic minimum viable product business
+            /// requirement. In other words, the app does not yet require it, but it will in final releases
+            /// of the application where all applications call for the JWT authentication design 
+            /// pattern for login and authentication, using the various projects that will use it
+            /// for said authentication (i.e JSopX.Asp.NETCore, JSopX.BlazorServerCore, JSopX.AngularCore, JSopX.ReactCore, JSopX.VueCore, etc.)
+            /// </para>
+            /// </summary>
             public const string JwtKey = "YourSuperSecretKey";
 
+
+            /// <summary>
+            /// Custom jSilvestri.com Constants class used to handle all common
+            /// string-based, strongly-typed, assembly names of projects.
+            /// <para>
+            /// ⚠ IMPORTANT ⚠
+            /// </para>
+            /// <para>
+            /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+            /// ready release. 
+            /// </para>
+            /// </summary>  
+            public static class StronglyTypedAssemblyNames
+            {
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string OpenProjectX = "JSopX.OpenProjectX";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string BridgeTooFar = "JSopX.BridgeTooFar";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle string-based, strongly-typed, 
+                /// assembly name of the project. This property is not used in the friend 
+                /// assembly configurations above, but are used in other areas of this
+                /// application and beyond.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string ClassLibrary = "JSopX.ClassLibrary";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string WebAPI = "JSopX.WebAPI";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string SharedResources = "JSopX.SharedResources";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string RCLxProper = "JSopX.RCLxProper";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string RCLxAssets = "JSopX.RCLxAssets";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string RCLxComponents = "JSopX.RCLxComponents";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string AngularCore = "JSopX.AngularCore";
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string ReactCore = "JSopX.ReactCore";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string VueCore = "JSopX.VueCore";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string AspNetCore = "JSopX.AspNetCore";
+
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string BlazorServerCore = "JSopX.BlazorServerCore";
+
+                /// <summary>
+                /// Custom jSilvestri.com Constant used to handle 
+                /// string-based, strongly-typed, assembly name of the 
+                /// project.
+                /// <para>
+                /// ⚠ IMPORTANT ⚠
+                /// </para>
+                /// <para>
+                /// This property <c>MUST</c> be converted to an <c>internal</c> const before production
+                /// ready release. It is currently defined as <c>public</c> by design, to mimic real-world early 
+                /// product development (e.g., minimal viable product).
+                /// </para>
+                /// </summary>
+                public const string MauiHybridNetCore = "JSopX.MauiHybridNetCore";
+
+            }
 
             /// <summary>
             /// Custom jSilvestri.com Constants class used to handle all common
@@ -1630,11 +2000,10 @@ namespace Jsopx.ClassLibrary
                 /// </summary>
                 public const bool IsSwagSerializeAsV2 = true;
 
-
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxAppsCollections
+                public static class OpenProjectX
                 {
 
                     /// <summary>
@@ -1756,21 +2125,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxMainProjectName;
+                        public const string Title = JsopxAppProjects.Names.Short.OpenProjectX;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxMainProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.OpenProjectX;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxMainProjectName;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.OpenXProject;
 
                     }
 
@@ -1779,7 +2148,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxClassLibrary
+                public static class ClassLibrary
                 {
 
                     /// <summary>
@@ -1901,21 +2270,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxClassLibraryProject;
+                        public const string Title = JsopxAppProjects.Names.Short.ClassLibraryProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JSopXClassLibrary;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.ClassLibraryProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxClassLibraryProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.ClassLibraryProject;
 
                     }
                 }
@@ -1923,7 +2292,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxWebApi
+                public static class WebApi
                 {
 
 
@@ -2046,21 +2415,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxWebApiProject;
+                        public const string Title = JsopxAppProjects.Names.Short.WebApiProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxWebApiProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.WebApiProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxWebApiProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.WebApiProject;
 
                     }
                 }
@@ -2068,7 +2437,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxSharedResources
+                public static class SharedResources
                 {
                     /// <summary>
                     /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
@@ -2189,21 +2558,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxSharedResourcesProject;
+                        public const string Title = JsopxAppProjects.Names.Short.SharedResourcesProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxSharedResources;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.SharedResourcesProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxSharedResourcesProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.SharedResourcesProject;
 
                     }
                 }
@@ -2211,7 +2580,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxAngular
+                public static class AngularCore
                 {
 
 
@@ -2334,14 +2703,14 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxAngularJsProject;
+                        public const string Title = JsopxAppProjects.Names.Short.AngularCoreProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxAngularJsProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.AngularCoreProject;
 
 
                         /// <summary>
@@ -2349,7 +2718,7 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxAngularJsProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.AngularCoreProject;
 
                     }
 
@@ -2358,7 +2727,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxBlazor
+                public static class BlazorServerCore
                 {
 
 
@@ -2481,14 +2850,14 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxBlazorProject;
+                        public const string Title = JsopxAppProjects.Names.Short.BlazorServerCoreProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxBlazorProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.BlazorServerCoreProject;
 
 
                         /// <summary>
@@ -2496,7 +2865,7 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxBlazorProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.BlazorServerCoreProject;
 
                     }
                 }
@@ -2504,7 +2873,153 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxReact
+                public static class MauiHybridNetCore
+                {
+
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
+                    /// </summary>
+                    public static class Contact
+                    {
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string Name = YourContactCards.FullName;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string Email = YourContactCards.Email;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string PrimaryUrl = YourContactCards.PrimaryUrl;
+
+                    }
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
+                    /// </summary>
+                    public static class License
+                    {
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants class used to handle basic MIT App license
+                        /// card.
+                        /// </summary>
+                        public static class Mit
+                        {
+
+                            /// <summary>
+                            /// Custom jSilvestri.com Constants Property that holds 
+                            /// string-based default Name Text for the MIT card.
+                            /// </summary>
+                            public const string Name = AppLicenseCards.Mit.Name;
+
+                            /// <summary>
+                            /// Custom jSilvestri.com Constants Property that holds 
+                            /// string-based default URL for the MIT card.
+                            /// </summary>
+                            public const string Url = AppLicenseCards.Mit.Url;
+
+                        }
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants class used to handle basic App Terms license
+                        /// card.
+                        /// </summary>
+                        public static class AppTermsOfServices
+                        {
+
+                            /// <summary>
+                            /// Custom jSilvestri.com Constants Property that holds 
+                            /// string-based default Name Text for the App card.
+                            /// </summary>
+                            public const string Name = AppLicenseCards.AppTermsOfServices.Name;
+
+                            /// <summary>
+                            /// Custom jSilvestri.com Constants Property that holds 
+                            /// string-based default URL for the MIT card.
+                            /// </summary>
+                            public const string Url = AppLicenseCards.AppTermsOfServices.Url;
+
+                        }
+
+                    }
+
+
+                    /// <summary>
+                    /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
+                    /// </summary>
+                    public static class SwagDoc
+                    {
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default swag card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string SwagVersion = AppSwaggerCards.SwagVersion;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default swag card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string SwagEndPointUri = AppSwaggerCards.SwagEndPointUri;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that holds 
+                        /// the true/false flag, indicating whether Swagger should be
+                        /// serializable using the legacy 2.0 standard for backwards 
+                        /// compatability or go for the new 3.0 standard.
+                        /// </summary>
+                        public const bool IsSwagSerializeAsV2 = AppSwaggerCards.IsSwagSerializeAsV2;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string JsopxAppVer = JsopxAppProjects.ProductVersions.JsopxMAUIProject;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string Title = JsopxAppProjects.Names.Short.MauiHybridCoreProject;
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string Description = JsopxAppProjects.Descriptions.Default.MauiHybridCoreProject;
+
+
+                        /// <summary>
+                        /// Custom jSilvestri.com Constants Property that shares a copy of
+                        /// your default contact card through the product instances we
+                        /// are currently configuring.
+                        /// </summary>
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.MauiHybridNetCoreProject;
+
+                    }
+                }
+
+                /// <summary>
+                /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
+                /// </summary>
+                public static class ReactCore
                 {
 
 
@@ -2627,14 +3142,14 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxReactJsProject;
+                        public const string Title = JsopxAppProjects.Names.Short.ReactCoreProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxReactJsProject;
+                        public const string Description = JsopxAppProjects.Descriptions.Default.ReactCoreProject;
 
 
                         /// <summary>
@@ -2642,7 +3157,7 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxReactJsProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.ReactCoreProject;
 
                     }
                 }
@@ -2650,7 +3165,7 @@ namespace Jsopx.ClassLibrary
                 /// <summary>
                 /// Custom jSilvestri.com BETA v 2024 JSopX™ Open Demo Class Constant used for Swagger product card configuration. 
                 /// </summary>
-                public static class JsopxVue
+                public static class VueCore
                 {
 
 
@@ -2773,22 +3288,21 @@ namespace Jsopx.ClassLibrary
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Title = JsopxAppProjects.Names.Short.JsopxVueProject;
+                        public const string Title = JsopxAppProjects.Names.Short.VueCoreProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string Description = JsopxAppProjects.Descriptions.Default.JsopxVueProject;
-
+                        public const string Description = JsopxAppProjects.Descriptions.Default.VueCoreProject;
 
                         /// <summary>
                         /// Custom jSilvestri.com Constants Property that shares a copy of
                         /// your default contact card through the product instances we
                         /// are currently configuring.
                         /// </summary>
-                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.JsopxVueProject;
+                        public const string TermsOfService = JsopxAppProjects.GitHubUrls.SeoFriendlyUrls.VueCoreProject;
 
                     }
                 }
