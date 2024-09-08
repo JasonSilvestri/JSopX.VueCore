@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" Version="1.6.21" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
   </ItemGroup>
 
 
@@ -45,44 +50,36 @@
   <ItemGroup>
 
     <!-- Default case: Reference for JSopX.WebAPI -->
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore'))"
-                      Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore'))" Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.OpenProjectX -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.AspNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.BlazorServerCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.BlazorServerCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
 
     <!-- Special case: Reference for JSopX.MauiHybridNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.AngularCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AngularCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.ReactCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.ReactCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.VueCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore\JSopX.WebAPI'))"
-                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.VueCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
   </ItemGroup>
