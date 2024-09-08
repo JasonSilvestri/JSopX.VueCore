@@ -60,8 +60,8 @@
     </ProjectReference>
 
 
-    <!-- Special case: Reference for JSopX.MuiHybridNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MuiHybridNetCore\JSopX.WebAPI'))"
+    <!-- Special case: Reference for JSopX.MauiHybridNetCore -->
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.MauiHybridNetCore\JSopX.WebAPI'))"
                       Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
