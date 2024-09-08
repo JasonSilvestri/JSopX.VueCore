@@ -38,8 +38,9 @@
 <!--Option 3: New code from Nova:-->
 
   <ItemGroup>
+
     <!-- Default case: Reference for JSopX.WebAPI -->
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX'))"
+    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore'))"
                       Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
@@ -48,9 +49,11 @@
                       Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
-    <!-- Additional case for JSopX.AspNetCore -->
+    <!-- Special case: Reference for JSopX.AspNetCore -->
     <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.WebAPI'))"
                       Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
+
   </ItemGroup>
+
 </Project>
