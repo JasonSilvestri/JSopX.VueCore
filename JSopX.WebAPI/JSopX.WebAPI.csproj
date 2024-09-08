@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -40,18 +40,20 @@
   <ItemGroup>
 
     <!-- Default case: Reference for JSopX.WebAPI -->
-    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX'))"
+    <ProjectReference Condition="! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX')) AND ! $([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore'))"
                       Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.OpenProjectX -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.WebAPI'))"
+                      Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
-    <!-- Additional case for JSopX.AspNetCore -->
+    <!-- Special case: Reference for JSopX.AspNetCore -->
     <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.AspNetCore\JSopX.WebAPI'))"
                       Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
+
   </ItemGroup>
 
 </Project>
