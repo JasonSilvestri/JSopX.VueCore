@@ -2,10 +2,10 @@
 ### from the ﻿jSilvestri.com BETA v 2024 the JSopX™ Open Project EXperiences Collection: 
 
 ### Phase 1 of 4
-Create the initial `JSopX.WebAPI` Project (the WebAPI Razor Class Library). 
+Create the initial `JSopX.WebAPI` Project (the JSopX™ Open Project EXperiences Web API). 
 
 ## Overview
-The `JSopX.WebAPI` Project (the WebAPI Razor Class Library) which leverages the same Proper, components & Web API all other projects in the JSopX™ Open Project EXperiences collection, and is the official WebAPI Project Example of the Enterprise-Level, Multi-Platform, Multi-Stack Application. 
+The `JSopX.WebAPI` Project (the JSopX™ Open Project EXperiences Web API) implements an ASP.NET Core Web API, serving as the back-end for the various web, desktop & mobile applications which exist in the JSopX™ Open Project EXperiences Collection of Projects. It provides RESTful API endpoints for data retrieval and manipulation, showcasing best practices in API development and integration, and is the official Web API Project for my Multi-Platform, Multi-Stack, Enterprise-Level Application. 
 
 ### Prerequisites
 
