@@ -59,7 +59,7 @@
     </ProjectReference>
 
     <!-- Special case: Reference for JSopX.OpenProjectX and JSopX.AspNetCore -->
-    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.AspNetCore\JSopX.WebAPI'))" Include="..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    <ProjectReference Condition="$([System.String]::Copy($(ProjectPath)).Contains('JSopX.OpenProjectX\JSopX.AspNetCore\JSopX.WebAPI'))" Include="..\..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
     </ProjectReference>
 
     <!-- Special case: Reference for just JSopX.AspNetCore -->
