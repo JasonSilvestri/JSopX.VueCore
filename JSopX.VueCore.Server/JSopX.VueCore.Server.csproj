@@ -13,13 +13,16 @@
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
       <Version>8.*-*</Version>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+    <ProjectReference Include="..\JSopX.RCLxProper\JSopX.RCLxProper\JSopX.RCLxProper.csproj" />
     <ProjectReference Include="..\jsopx.vuecore.client\jsopx.vuecore.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\JSopX.WebAPI\JSopX.WebAPI\JSopX.WebAPI.csproj" />
   </ItemGroup>
 
 </Project>
