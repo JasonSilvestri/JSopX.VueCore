@@ -1,0 +1,6 @@
+@JSopX.VueCore.Server_HostAddress = http://localhost:5201
+
+GET {{JSopX.VueCore.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
