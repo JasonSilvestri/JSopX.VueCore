@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <!-- Define a target to output messages -->
-  <Target Name="PathConfigCheck">
+  <Target Name="WebApiPathConfigCheck">
     <!-- Print a message if PathConfig.targets is loaded -->
     <Message Text="JSopX Nova: PathConfig.targets file has been found and loaded inside official WebAPI project." Importance="high" />
   </Target>
