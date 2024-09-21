@@ -19,10 +19,14 @@
 
   <!--Option 1: Original-->
 
-  
+  <Import Project="..\PathConfig.targets" Condition="Exists('..\PathConfig.targets')" />
+
+
   <ItemGroup>
-    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
-    </ProjectReference>
+    <ProjectReference Include="$(WebAPIClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+    <!--<ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj">
+    </ProjectReference>-->
   </ItemGroup>
+
 
 </Project>

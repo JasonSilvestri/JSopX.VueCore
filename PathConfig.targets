@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <WebAPIClassLibraryPath>..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebAPIClassLibraryPath>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(WebAPIClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+</Project>
