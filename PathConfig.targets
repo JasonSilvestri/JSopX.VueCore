@@ -1,20 +1,76 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<!--<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <!-- Define the paths -->
+  -->
+<!-- Define the paths -->
+<!--
 
   <PropertyGroup>
     <ClassLibraryPath>..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
   </PropertyGroup>
 
-  <!-- ItemGroup for references -->
+  -->
+<!-- ItemGroup for references -->
+<!--
   <ItemGroup>
     <ProjectReference Include="$(ClassLibraryPath)\JSopX.ClassLibrary.csproj" />
   </ItemGroup>
 
+  -->
+<!-- Define a target to output messages -->
+<!--
+  <Target Name="WebAPIPathConfigCheck">
+    -->
+<!-- Print a message if PathConfig.targets is loaded -->
+<!--
+    <Message Text="JSopX Nova: PathConfig.targets file has been found and loaded inside official RCL x Proper project." Importance="high" />
+  </Target>
+
+</Project>-->
+
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Define the paths -->
+
+  <PropertyGroup>
+
+    <!-- Get the project directory and solution directory -->
+    <ProjectPath>$(MSBuildProjectDirectory)</ProjectPath>
+    <RootPath>$(SolutionDir)</RootPath>
+
+    <!-- Calculate directory depth -->
+    <ProjectPathDepth>$([System.String]::Copy($(ProjectPath)).Split('\').Length)</ProjectPathDepth>
+    <RootPathDepth>$([System.String]::Copy($(RootPath)).Split('\').Length)</RootPathDepth>
+    <PathDepthDiff>$([MSBuild]::Subtract($(ProjectPathDepth), $(RootPathDepth)))</PathDepthDiff>
+
+    <!-- Conditional Property Setting Based on PathDepthDiff -->
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '0' ">..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '4' ">..\..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+
+  </PropertyGroup>
+
+
+  <!-- ItemGroup for references -->
+  <ItemGroup>
+
+    <!-- Use the dynamically resolved path -->
+    <ProjectReference Include="$(WebApiClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+
+  </ItemGroup>
+
   <!-- Define a target to output messages -->
-  <Target Name="WebApiPathConfigCheck">
+  <Target Name="WebAPIPathConfigCheck">
     <!-- Print a message if PathConfig.targets is loaded -->
-    <Message Text="JSopX Nova: PathConfig.targets file has been found and loaded inside official WebAPI project." Importance="high" />
+    <Message Text="JSopX Nova: PathConfig.targets file Found. It is now loaded by official JSopX WebAPI Project. " Importance="high" />
+    <Message Text="JSopX Nova: Current Project Path = $(ProjectPath)" Importance="high" />
+    <Message Text="JSopX Nova: Solution Path = $(RootPath)" Importance="high" />
+    <Message Text="Project Path Depth: $(ProjectPathDepth)" Importance="high"  />
+    <Message Text="Root Path Depth: $(RootPathDepth)" Importance="high"  />
+    <Message Text="JSopX Nova: Directory Depth Difference = $(PathDepthDiff)" Importance="high" />
+    <Message Text="JSopX Nova: Final Directory structure and project = $(WebApiClassLibraryPath)\JSopX.ClassLibrary.csproj" Importance="high" />
+
   </Target>
 
 </Project>
