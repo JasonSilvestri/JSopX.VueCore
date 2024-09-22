@@ -45,10 +45,10 @@
 
     <!-- Conditional Property Setting Based on PathDepthDiff -->
     <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '0' ">..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
-    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
-    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '1' ">..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
     <WebApiClassLibraryPath Condition=" '$(PathDepthDiff)' == '4' ">..\..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
-
   </PropertyGroup>
 
 
