@@ -1,0 +1,85 @@
+<!--<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  --><!-- Define the paths --><!--
+  --><!--<PropertyGroup>
+    <ClassLibraryPath>..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <WebAPIPath>..\JSopX.WebAPI\JSopX.WebAPI</WebAPIPath>
+    <RCLxProperPath>..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+    <WebApiClassLibraryPath>..\JSopX.WebAPI\JSopX.WebAPI\JSopX.ClassLibrary\JSopX.ClassLibrary</WebApiClassLibraryPath>
+    <RCLxProperClassLibraryPath>..\JSopX.RCLxProper\JSopX.RCLxProper\JSopX.ClassLibrary\JSopX.ClassLibrary</RCLxProperClassLibraryPath>
+  </PropertyGroup>--><!--
+
+  <PropertyGroup>-->
+    
+
+   
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Define the paths -->
+
+  <PropertyGroup>
+    
+    <!--<ClassLibraryPath>..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <WebAPIPath>..\JSopX.WebAPI\JSopX.WebAPI</WebAPIPath>
+    <RCLxProperPath>..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>-->
+    
+    <!-- Get the project directory and solution directory -->
+    <ProjectPath>$(MSBuildProjectDirectory)</ProjectPath>
+    <RootPath>$(SolutionDir)</RootPath>
+
+    <!-- Calculate directory depth -->
+    <ProjectPathDepth>$([System.String]::Copy($(ProjectPath)).Split('\').Length)</ProjectPathDepth>
+    <RootPathDepth>$([System.String]::Copy($(RootPath)).Split('\').Length)</RootPathDepth>
+    <PathDepthDiff>$([MSBuild]::Subtract($(ProjectPathDepth), $(RootPathDepth)))</PathDepthDiff>
+
+    <!-- Class Library Conditional Property Setting Based on PathDepthDiff -->
+    <ClassLibraryPath Condition=" '$(PathDepthDiff)' == '0' ">..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <ClassLibraryPath Condition=" '$(PathDepthDiff)' == '1' ">..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <ClassLibraryPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <ClassLibraryPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+    <ClassLibraryPath Condition=" '$(PathDepthDiff)' == '4' ">..\..\..\..\..\JSopX.ClassLibrary\JSopX.ClassLibrary</ClassLibraryPath>
+
+  
+    <!-- RCLxProper Conditional Property Setting Based on PathDepthDiff -->
+    <RCLxProperPath Condition=" '$(PathDepthDiff)' == '0' ">..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+    <RCLxProperPath Condition=" '$(PathDepthDiff)' == '1' ">..\..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+    <RCLxProperPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+    <RCLxProperPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+    <RCLxProperPath Condition=" '$(PathDepthDiff)' == '4' ">..\..\..\..\..\JSopX.RCLxProper\JSopX.RCLxProper</RCLxProperPath>
+
+      <!-- Web API Conditional Property Setting Based on PathDepthDiff -->
+    <WebApiPath Condition=" '$(PathDepthDiff)' == '0' ">..\JSopX.WebAPI\JSopX.WebAPI</WebApiPath>
+    <WebApiPath Condition=" '$(PathDepthDiff)' == '1' ">..\..\JSopX.WebAPI\JSopX.WebAPI</WebApiPath>
+    <WebApiPath Condition=" '$(PathDepthDiff)' == '2' ">..\..\..\JSopX.WebAPI\JSopX.WebAPI</WebApiPath>
+    <WebApiPath Condition=" '$(PathDepthDiff)' == '3' ">..\..\..\..\JSopX.WebAPI\JSopX.WebAPI</WebApiPath>
+    <WebApiPath Condition=" '$(PathDepthDiff)' == '4' ">..\..\..\..\..\JSopX.WebAPI\JSopX.WebAPI</WebApiPath>
+
+  </PropertyGroup>
+
+
+  <!-- ItemGroup for references -->
+  <ItemGroup>
+
+    <!-- Use the dynamically resolved path --><!--
+    <ProjectReference Include="$(RCLxProperClassLibraryPath)\JSopX.ClassLibrary.csproj" />-->
+
+    <ProjectReference Include="$(ClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+    <ProjectReference Include="$(RCLxProperPath)\JSopX.RCLxProper.csproj" />
+    <ProjectReference Include="$(WebApiPath)\JSopX.WebAPI.csproj" />
+  </ItemGroup>
+
+  <!-- Define a target to output messages -->
+  <Target Name="JsopXVueCorePathConfigCheck">
+    <!-- Print a message if PathConfig.targets is loaded -->
+    <Message Text="JSopX Nova: PathConfig.targets file Found. It is now loaded by official JSopX Vue Core Project. " Importance="high" />
+    <Message Text="JSopX Nova: Current Project Path = $(ProjectPath)" Importance="high" />
+    <Message Text="JSopX Nova: Solution Path = $(RootPath)" Importance="high" />
+    <Message Text="Project Path Depth: $(ProjectPathDepth)" Importance="high"  />
+    <Message Text="Root Path Depth: $(RootPathDepth)" Importance="high"  />
+    <Message Text="JSopX Nova: Directory Depth Difference = $(PathDepthDiff)" Importance="high" />
+    <Message Text="JSopX Nova: Class Library Final Directory structure and project = $(ClassLibraryPath)\JSopX.ClassLibrary.csproj" Importance="high" />
+    <Message Text="JSopX Nova: RCL x Proper Final Directory structure and project = $(RCLxProperPath)\JSopX.RCLxProper.csproj" Importance="high" />
+    <Message Text="JSopX Nova: Web API Final Directory structure and project = $(WebApiPath)\JSopX.WebAPI.csproj" Importance="high" />
+  </Target>
+
+</Project>
