@@ -8,6 +8,11 @@
     <SpaRoot>..\jsopx.vuecore.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
     <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
+  
+    <!--<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>-->
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+    <!--https://learn.microsoft.com/en-us/dotnet/core/tools/sdk-errors/netsdk1022-->
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +32,8 @@
     <!-- Default static project references if the file does not exist -->
     <ItemGroup Condition="Exists('..\PathConfig.targets')">
       <ProjectReference Include="$(ClassLibraryPath)\JSopX.ClassLibrary.csproj" />
-      <ProjectReference Include="$(RCLxProperPath)\JSopX.RCLxProper.csproj" />
+      <ProjectReference Include="$(RCLxProperPath)\JSopX.RCLxProper.csproj"/>
+
       <ProjectReference Include="$(WebApiPath)\JSopX.WebAPI.csproj" />
       <ProjectReference Include="..\jsopx.vuecore.client\jsopx.vuecore.client.esproj">
         <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -38,7 +44,8 @@
     <!--  Default static project references if the file does not exist-->
     <ItemGroup Condition="!Exists('..\PathConfig.targets')">
     <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
-    <ProjectReference Include="..\JSopX.RCLxProper\JSopX.RCLxProper\JSopX.RCLxProper.csproj" />
+    <ProjectReference Include="..\JSopX.RCLxProper\JSopX.RCLxProper\JSopX.RCLxProper.csproj"/>
+
     <ProjectReference Include="..\jsopx.vuecore.client\jsopx.vuecore.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
