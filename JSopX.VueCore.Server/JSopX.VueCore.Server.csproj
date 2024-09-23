@@ -29,6 +29,9 @@
       <ProjectReference Include="$(ClassLibraryPath)\JSopX.ClassLibrary.csproj" />
       <ProjectReference Include="$(RCLxProperPath)\JSopX.RCLxProper.csproj" />
       <ProjectReference Include="$(WebApiPath)\JSopX.WebAPI.csproj" />
+      <ProjectReference Include="..\jsopx.vuecore.client\jsopx.vuecore.client.esproj">
+        <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      </ProjectReference>
     </ItemGroup>
 
 
