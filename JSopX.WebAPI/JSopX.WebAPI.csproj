@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="WebApiPathConfigCheck">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="WebAPIReferencePathConfigCheck">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -25,7 +25,7 @@
 
   <!-- Default static project references if the file does not exist -->
   <ItemGroup Condition="Exists('..\PathConfig.targets')">
-    <ProjectReference Include="$(WebApiClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+    <ProjectReference Include="$(WebAPIClassLibraryPath)\JSopX.ClassLibrary.csproj" />
   </ItemGroup>
 
 
