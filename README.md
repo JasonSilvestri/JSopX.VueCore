@@ -134,7 +134,7 @@ The following JSopX™ Projects are used to share common resources and informati
 3. **[JSopX™ Shared Resources Project](https://github.com/JasonSilvestri/JSopX.SharedResources)**: The `JSopX.SharedResources` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more traditional way.
 4. **[JSopX™ Razor Class Library RCLxProper Project](https://github.com/JasonSilvestri/JSopX.RCLxProper)**: The `JSopX.RCLxProper` shared Razor Class library, containing the most lightweight version of our common HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more modern way (to better support npm, vite, webpack based operations).
 5. **[JSopX™ Razor Class Library RCLxAssets Project](https://github.com/JasonSilvestri/JSopX.RCLxAssets)**: The `JSopX.RCLxAssets` shared recources library, containing all possible assets, src, and creative versions of our  HTML, CSS, JS, Images and other reuseable theming objects, used across projects in a more modern way (to better support npm, vite, webpack based operations).
-6. **[JSopX™ Razor Class Library RCLxComponents Project](https://github.com/JasonSilvestri/JSopX.RCLxComponents)**: The `JSopX.RCLxComponents` shared recources library, containing common Razor Componets and other reuseable theming objects used in our Asp.NET Core, Blazor and .NET MAUI projects.
+6. **[JSopX™ Razor Class Library RCLxComponents Project](https://github.com/JasonSilvestri/JSopX.RCLxAssets)**: The `JSopX.RCLxAssets` shared recources library, containing common Razor Componets and other reuseable theming objects used in our Asp.NET Core, Blazor and .NET MAUI projects.
 
 **The JSopX™ Open Project EXperiences that access the Asp.NET Core WebAPI:**
 
@@ -262,7 +262,7 @@ public class ExampleService
     
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./src/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./src/full-assets/"
     }
     ```
 
@@ -287,7 +287,7 @@ public class ExampleService
     
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/full-assets/"
     }
     ```
 
@@ -316,7 +316,7 @@ public class ExampleService
     // package.json
     "scripts": {
         "postinstall": "npm run copy-shared-resources",
-        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/assets/"
+        "copy-shared-resources": "cp -r ../JsopX.SharedResources/* ./public/full-assets/"
     }
     ```
 
