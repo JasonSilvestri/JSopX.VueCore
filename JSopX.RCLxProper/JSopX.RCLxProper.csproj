@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor"  InitialTargets="RCLxProperReferencePathConfigCheck">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -21,20 +21,29 @@ The JSopX™ Razor Class Library for Project X Proper is the successor to the Sh
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+  <!--<ItemGroup>
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>-->
+  
+  
+
+  <!--Option 1: Original-->
+
+  <!-- Import if the file exists -->
+  <Import Project="..\PathConfig.targets" Condition="Exists('..\PathConfig.targets')" />
+
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="Exists('..\PathConfig.targets')">
+    <ProjectReference Include="$(RCLxProperClassLibraryPath)\JSopX.ClassLibrary.csproj" />
   </ItemGroup>
 
 
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="!Exists('..\PathConfig.targets')">
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
 
 </Project>
