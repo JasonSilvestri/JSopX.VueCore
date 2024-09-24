@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="WebAPIReferencePathConfigCheck">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>$(AssemblyName)-557F9CD2-5022-40B1-A8E0-BB91182BEB9E</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" Version="1.6.21" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+  </ItemGroup>
+
+
+
+  <!--Option 1: Original-->
+
+  <!-- Import if the file exists -->
+  <Import Project="..\PathConfig.targets" Condition="Exists('..\PathConfig.targets')" />
+
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="Exists('..\PathConfig.targets')">
+    <ProjectReference Include="$(WebAPIClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+
+
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="!Exists('..\PathConfig.targets')">
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+
+
+</Project>
