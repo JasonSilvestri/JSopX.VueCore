@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor"  InitialTargets="RCLxProperReferencePathConfigCheck">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Description>The JSopX™ Razor Class Library X Proper Open Project EXperience is the successor to the Shared Resources Class Library Project, offering a more modern approach to managing shared resources such as images, styles, and scripts across multiple web applications in the JSopX™ Open Project EXperiences collection. </Description>
+    <Product>The JSopX™ Razor Class Library for Project X Proper</Product>
+    <Company>jSilvestri.com</Company>
+    <PackageProjectUrl>https://github.com/JasonSilvestri/JSopX.RCLxProper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JasonSilvestri/JSopX.RCLxProper.git</RepositoryUrl>
+    <PackageReleaseNotes>This is the MVP release of the The JSopX™ Razor Class Library X Proper Open Project EXperience.
+
+The JSopX™ Razor Class Library for Project X Proper is the successor to the Shared Resources Class Library Project, offering a more modern approach to managing shared resources such as images, styles, and scripts across multiple web applications in the JSopX™ Open Project EXperiences collection. </PackageReleaseNotes>
+    <Copyright>© 2024 JSopX™ by Jason Silvestri</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>-->
+  
+  
+
+  <!--Option 1: Original-->
+
+  <!-- Import if the file exists -->
+  <Import Project="..\PathConfig.targets" Condition="Exists('..\PathConfig.targets')" />
+
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="Exists('..\PathConfig.targets')">
+    <ProjectReference Include="$(RCLxProperClassLibraryPath)\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+
+
+  <!-- Default static project references if the file does not exist -->
+  <ItemGroup Condition="!Exists('..\PathConfig.targets')">
+    <ProjectReference Include="..\JSopX.ClassLibrary\JSopX.ClassLibrary\JSopX.ClassLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
